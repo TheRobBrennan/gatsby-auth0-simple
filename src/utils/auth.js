@@ -68,3 +68,9 @@ const auth = isBrowser
   export const getProfile = () => {
     return user
   }
+
+  // When the user refreshes the page, the isLoggedFlag in local storage indicates they are logged in, but we do not have any user profile or token information available. Storing these credentials in local storage is bad practice. We do have a checkSession function we can use from Auth0 that will check if a user is logged in and return valid tokens and user profile information for use in the application without requiring user interaction. Neat, huh?
+  export const silentAuth = callback => {
+    if (!isAuthenticated()) return callback()
+    auth.checkSession({}, setSession(callback))
+  }
