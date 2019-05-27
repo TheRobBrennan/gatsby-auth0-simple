@@ -2,6 +2,21 @@
 
 This project was based off the tutorial [Securing Gatsby with Auth0](https://auth0.com/blog/securing-gatsby-with-auth0/)
 
+## Auth0
+
+Once you are at the dashboard for your application (please refer to the original tutorial if you need assistance with that), you will want to create a new application:
+
+Application name: [DEMO] Gatsby
+Application type: Single Page Web App (choose React as the technology)
+
+Click on the Settings tab and make sure that you define the following settings for your locally running server:
+
+Allowed Callback URLs:  http://localhost:8000/callback
+Allowed Web Origins:    http://localhost:8000
+Allowed Logout URLs:    http://localhost:8000
+
+You will want to add additional entries if you start to use this application on other hosts.
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
