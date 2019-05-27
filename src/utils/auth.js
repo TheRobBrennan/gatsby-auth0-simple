@@ -74,3 +74,8 @@ const auth = isBrowser
     if (!isAuthenticated()) return callback()
     auth.checkSession({}, setSession(callback))
   }
+
+  export const logout = () => {
+    localStorage.setItem("isLoggedIn", false)
+    auth.logout()
+  }
