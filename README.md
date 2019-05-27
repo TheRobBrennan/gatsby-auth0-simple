@@ -17,6 +17,8 @@ Allowed Logout URLs:    http://localhost:8000
 
 You will want to add additional entries if you start to use this application on other hosts.
 
+Since Gatsby uses the library `dotenv`, we can declare our environment variables there. Please copy `.env.sample` to `.env.development` and be sure to supply your appropriate Auth0 domain and client ID for your application.
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
